@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/public', express.static(process.cwd() + '/public'));
 app.use('/_api/app-info', cors({ origin: 'https://www.freecodecamp.org' }));
+app.use('/api', cors({ origin: 'https://www.freecodecamp.org' }));
 
 //Sample front-end
 app.route('/b/:board/')
