@@ -8,7 +8,7 @@ A full-stack anonymous message board with a matrix-inspired interface. Visitors 
 2. Optionally set `DB_FILE` in `.env` to choose where the SQLite database file is stored. It defaults to `data/message-board.sqlite`.
 3. Run `npm start`. No database server or separate database installation is needed. With `NODE_ENV=test`, the ten functional tests run after the server starts.
 
-Run `npm test` to execute the ten functional tests against the local SQLite database. The app is available at `http://localhost:3000`; the sample board is `/b/general/`.
+Run `npm test` to execute the ten functional tests against the local SQLite database. The app and default general board are available at `http://localhost:3000`; other boards are available at `/b/:board/`.
 
 ## API
 

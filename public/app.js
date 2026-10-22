@@ -1,8 +1,9 @@
 'use strict';
 
 const pathParts = window.location.pathname.split('/').filter(Boolean);
-const board = pathParts[1] || '';
-const threadId = pathParts[2] || '';
+const isBoardRoute = pathParts[0] === 'b';
+const board = isBoardRoute ? pathParts[1] : 'general';
+const threadId = isBoardRoute ? pathParts[2] || '' : '';
 
 function element(tag, className, text) {
   const node = document.createElement(tag);

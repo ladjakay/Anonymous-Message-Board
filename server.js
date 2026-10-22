@@ -32,10 +32,10 @@ app.route('/b/:board/:threadid')
     res.sendFile(process.cwd() + '/views/thread.html');
   });
 
-//Index page (static HTML)
+//Open the default board at the app's root URL.
 app.route('/')
   .get(function (req, res) {
-    res.sendFile(process.cwd() + '/views/index.html');
+    res.sendFile(process.cwd() + '/views/board.html');
   });
 
 //For FCC testing purposes
