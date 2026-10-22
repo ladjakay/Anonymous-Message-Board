@@ -3,6 +3,7 @@ require('dotenv').config();
 const express     = require('express');
 const bodyParser  = require('body-parser');
 const helmet      = require('helmet');
+const cors        = require('cors');
 
 const database           = require('./database');
 const apiRoutes         = require('./routes/api.js');
@@ -21,6 +22,7 @@ app.use(function (req, res, next) {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/public', express.static(process.cwd() + '/public'));
+app.use('/_api/app-info', cors({ origin: 'https://www.freecodecamp.org' }));
 
 //Sample front-end
 app.route('/b/:board/')
